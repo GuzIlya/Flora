@@ -7,5 +7,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/flora_db</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="ddddn02f7avh1k@ec2-46-137-159-254.eu-west-1.compute.amazonaws.com" uuid="c302ad62-d708-41f4-bdbc-c6d9340168cf">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-46-137-159-254.eu-west-1.compute.amazonaws.com:5432/ddddn02f7avh1k?sslmode=require</jdbc-url>
+    </data-source>
   </component>
 </project>
