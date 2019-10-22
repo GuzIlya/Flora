@@ -27,14 +27,6 @@ public class LoginServiceImpl implements LoginService {
     @Autowired
     private TokensRepository tokensRepository;
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-    @Autowired
-    private PasswordEncoder passwordEncoder;
-
     @Autowired
     private UsersRepository usersRepository;
 
@@ -45,7 +37,7 @@ public class LoginServiceImpl implements LoginService {
         if (userCandidate.isPresent()) {
             User user = userCandidate.get();
 
-            if (passwordEncoder.matches(loginForm.getPassword(), user.getHashPassword())) {
+            if (new BCryptPasswordEncoder().matches(loginForm.getPassword(), user.getHashPassword())) {
                 Token token = Token.builder()
                         .user(user)
                         .value(RandomStringUtils.random(10, true, true))

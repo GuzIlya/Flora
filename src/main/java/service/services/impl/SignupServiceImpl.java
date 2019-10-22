@@ -1,7 +1,7 @@
 package service.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import service.forms.UserForm;
 import service.models.User;
@@ -10,8 +10,6 @@ import service.services.SignupService;
 
 @Service
 public class SignupServiceImpl implements SignupService {
-    @Autowired
-    private PasswordEncoder passwordEncoder;
 
     @Autowired
     private UsersRepository usersRepository;
@@ -19,7 +17,7 @@ public class SignupServiceImpl implements SignupService {
     @Override
     public void signUp(UserForm userForm) {
         if(!usersRepository.findOneByLogin(userForm.getLogin()).isPresent()) {
-            String hashPassword = passwordEncoder.encode(userForm.getPassword());
+            String hashPassword = new BCryptPasswordEncoder().encode(userForm.getPassword());
 
             User user = User.builder()
                     .hashPassword(hashPassword)
