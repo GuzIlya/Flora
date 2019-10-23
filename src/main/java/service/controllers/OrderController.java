@@ -42,4 +42,10 @@ public class OrderController {
     public ResponseEntity<List<OrderDto>> getOrders() {
         return ResponseEntity.ok(orderService.getOrders());
     }
+
+    @GetMapping("/getOrderById")
+    public ResponseEntity<OrderDto> getOrderById(@RequestParam("id") Long id){
+
+        return ResponseEntity.ok(orderService.getOrderById(id));
+    }
 }

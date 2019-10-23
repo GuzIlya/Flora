@@ -23,6 +23,14 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    public OrderDto getOrderById(Long id) {
+        Optional<Order> actual = orderRepository.findOneById(id);
+        if(actual.isPresent())
+            return OrderDto.from(actual.get());
+        else throw new IllegalArgumentException("No such order");
+    }
+
+    @Override
     public void addOrder(OrderForm orderForm) {
             Order order = Order.builder()
                     .date(orderForm.getDate())
