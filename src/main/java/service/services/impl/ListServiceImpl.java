@@ -66,9 +66,9 @@ public class ListServiceImpl implements ListService {
     @Override
     public void addOrderType(OrderTypeForm orderTypeForm) {
         OrderType orderType = OrderType.builder()
-                .name(orderTypeForm.getName())
+                .name("test")
                 .build();
-        OrderType orderType1 = new OrderType(null, orderTypeForm.getName());
-        orderTypeRepository.save(orderType1);
+
+        orderTypeRepository.save(orderType);
     }
 }
