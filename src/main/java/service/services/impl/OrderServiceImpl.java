@@ -2,7 +2,6 @@ package service.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import service.forms.OrderForm;
 import service.models.Order;
@@ -38,6 +37,7 @@ public class OrderServiceImpl implements OrderService {
                     .address(orderForm.getAddress())
                     .paymentMethod(orderForm.getPaymentMethod())
                     .notes(orderForm.getNotes())
+                    .status(orderForm.getStatus())
                     .build();
             orderRepository.save(order);
     }
@@ -58,6 +58,7 @@ public class OrderServiceImpl implements OrderService {
                 .address(orderForm.getAddress())
                 .paymentMethod(orderForm.getPaymentMethod())
                 .notes(orderForm.getNotes())
+                .status(orderForm.getStatus())
                 .build();
 
 
@@ -88,6 +89,7 @@ public class OrderServiceImpl implements OrderService {
                 .address(orderForm.getAddress())
                 .paymentMethod(orderForm.getPaymentMethod())
                 .notes(orderForm.getNotes())
+                .status(orderForm.getStatus())
                 .build();
 
         Example<Order> example = Example.of(order);
