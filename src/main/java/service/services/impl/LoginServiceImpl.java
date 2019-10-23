@@ -48,4 +48,21 @@ public class LoginServiceImpl implements LoginService {
             }
         } throw new IllegalArgumentException("User not found");
     }
+
+    @Override
+    public void loginOut(String tokenName) {
+        Optional<Token> tokenCandidate = tokensRepository.findOneByValue(tokenName);
+        if(tokenCandidate.isPresent()){
+            tokensRepository.delete(tokenCandidate.get().getId());
+        } else throw new IllegalArgumentException("Wrong token");
+    }
+
+    @Override
+    public void checkToken(String tokenName) {
+        Optional<Token> tokenCandidate = tokensRepository.findOneByValue(tokenName);
+        if(!tokenCandidate.isPresent())
+            throw new IllegalArgumentException("Wrong token");
+    }
+
+
 }
