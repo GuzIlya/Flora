@@ -50,4 +50,9 @@ public class Order {
 
     @Column(name = "notes")
     private String notes;
+
+    @Column(name = "status")
+    private String status;
+
+
 }

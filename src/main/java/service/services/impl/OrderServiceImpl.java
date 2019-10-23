@@ -38,11 +38,40 @@ public class OrderServiceImpl implements OrderService {
                     .paymentMethod(orderForm.getPaymentMethod())
                     .notes(orderForm.getNotes())
                     .build();
-
             orderRepository.save(order);
     }
 
    @Override
+    public void changeOrder(OrderForm orderForm) {
+        Order order = Order.builder()
+                .id(orderForm.getId())
+                .date(orderForm.getDate())
+                .time(orderForm.getTime())
+                .orderList(orderForm.getOrderList())
+                .orderPrice(orderForm.getOrderPrice())
+                .customer(orderForm.getCustomer())
+                .customerNumber(orderForm.getCustomerNumber())
+                .receiver(orderForm.getReceiver())
+                .receiverNumber(orderForm.getReceiverNumber())
+                .address(orderForm.getAddress())
+                .paymentMethod(orderForm.getPaymentMethod())
+                .notes(orderForm.getNotes())
+                .build();
+
+
+
+        try{
+            Optional<Order> actual = orderRepository.findOneById(order.getId());
+            if (actual.isPresent()){
+                orderRepository.delete(actual.get());
+            }
+            orderRepository.save(order);
+        } catch (Exception e){
+             throw new IllegalArgumentException("No such order");
+        }
+    }
+
+    @Override
     public void deleteOrder(OrderForm orderForm) {
         Order order = Order.builder()
                 .date(orderForm.getDate())
@@ -66,7 +95,7 @@ public class OrderServiceImpl implements OrderService {
                 orderRepository.delete(actual);
             }
         } catch (Exception e){
-             throw new IllegalArgumentException("No such order");
+            throw new IllegalArgumentException("No such order");
         }
     }
 

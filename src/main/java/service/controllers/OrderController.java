@@ -27,6 +27,12 @@ public class OrderController {
         return ResponseEntity.ok().build();
     }
 
+    @PostMapping("/changeOrder")
+    public ResponseEntity<Object> changeOrder(@RequestBody OrderForm orderForm){
+        orderService.changeOrder(orderForm);
+        return ResponseEntity.ok().build();
+    }
+
     @GetMapping("/findByCustomerNumber")
     public ResponseEntity<List<OrderDto>> findByCustomerNumber(@RequestParam("customerNumber") String customerNumber){
         return ResponseEntity.ok(orderService.findByCustomerNumber(customerNumber));

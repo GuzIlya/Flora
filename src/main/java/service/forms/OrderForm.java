@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderForm {
+    private Long id;
+
     private String date;
 
     private String time;
@@ -30,4 +32,6 @@ public class OrderForm {
     private String paymentMethod;
 
     private String notes;
+
+    private String status;
 }

@@ -15,6 +15,8 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 @Builder
 public class OrderDto {
+    private Long id;
+
     private String date;
 
     private String time;
@@ -37,9 +39,12 @@ public class OrderDto {
 
     private String notes;
 
+    private String status;
+
 
     public static OrderDto from(Order order) {
         return OrderDto.builder()
+                .id(order.getId())
                 .date(order.getDate())
                 .time(order.getTime())
                 .orderList(order.getOrderList())
@@ -51,6 +56,7 @@ public class OrderDto {
                 .address(order.getAddress())
                 .paymentMethod(order.getPaymentMethod())
                 .notes(order.getNotes())
+                .status(order.getStatus())
                 .build();
     }
 

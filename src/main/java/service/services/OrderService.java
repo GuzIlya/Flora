@@ -9,5 +9,6 @@ public interface OrderService {
     List<OrderDto> findByCustomerNumber(String customerNumber);
     void addOrder(OrderForm orderForm);
     void deleteOrder(OrderForm orderForm);
+    void changeOrder(OrderForm orderForm);
     List<OrderDto> getOrders();
 }
