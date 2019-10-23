@@ -5,6 +5,7 @@ import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import service.forms.OrderTypeForm;
 import service.models.OrderType;
 import service.repositories.OrderTypeRepository;
 import service.repositories.PaymentMethodRepository;
@@ -44,7 +45,7 @@ public class ListServiceImpl implements ListService {
     }
 
     @Override
-    public void deleteOrderType(OrderTypeDto orderType) {
+    public void deleteOrderType(OrderTypeForm orderType) {
         OrderType order = OrderType.builder()
                 .name(orderType.getName())
                 .build();
@@ -62,7 +63,7 @@ public class ListServiceImpl implements ListService {
     }
 
     @Override
-    public void addOrderType(OrderTypeDto orderType) {
+    public void addOrderType(OrderTypeForm orderType) {
         OrderType order = OrderType.builder()
                 .name(orderType.getName())
                 .build();

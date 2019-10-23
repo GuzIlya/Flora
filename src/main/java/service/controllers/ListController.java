@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import service.forms.OrderTypeForm;
 import service.services.ListService;
 import service.transfer.OrderTypeDto;
 import service.transfer.PaymentMethodDto;
@@ -31,14 +32,14 @@ public class ListController {
     }
 
     @PostMapping("/addOrderType")
-    public ResponseEntity<Object> addOrderType(@RequestBody OrderTypeDto orderTypeDto) {
-        listService.addOrderType(orderTypeDto);
+    public ResponseEntity<Object> addOrderType(@RequestBody OrderTypeForm orderTypeForm) {
+        listService.addOrderType(orderTypeForm);
         return ResponseEntity.ok().build();
     }
 
     @PostMapping("/deleteOrderType")
-    public ResponseEntity<Object> deleteOrderType(@RequestBody OrderTypeDto orderTypeDto) {
-        listService.deleteOrderType(orderTypeDto);
+    public ResponseEntity<Object> deleteOrderType(@RequestBody OrderTypeForm orderTypeForm) {
+        listService.deleteOrderType(orderTypeForm);
         return ResponseEntity.ok().build();
     }
 
