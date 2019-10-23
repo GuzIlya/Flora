@@ -15,6 +15,7 @@ import service.transfer.OrderTypeDto;
 import service.transfer.PaymentMethodDto;
 import service.transfer.StreetDto;
 
+import javax.persistence.GeneratedValue;
 import java.util.List;
 
 @Service
@@ -63,10 +64,11 @@ public class ListServiceImpl implements ListService {
     }
 
     @Override
-    public void addOrderType(OrderTypeForm orderType) {
-        OrderType order = OrderType.builder()
-                .name(orderType.getName())
+    public void addOrderType(OrderTypeForm orderTypeForm) {
+        OrderType orderType = OrderType.builder()
+                .name(orderTypeForm.getName())
                 .build();
-        orderTypeRepository.save(order);
+        OrderType orderType1 = new OrderType(null, orderTypeForm.getName());
+        orderTypeRepository.save(orderType1);
     }
 }
