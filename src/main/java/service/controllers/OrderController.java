@@ -45,7 +45,6 @@ public class OrderController {
 
     @GetMapping("/getOrderById")
     public ResponseEntity<OrderDto> getOrderById(@RequestParam("id") Long id){
-
         return ResponseEntity.ok(orderService.getOrderById(id));
     }
 }

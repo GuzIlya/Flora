@@ -1,9 +1,11 @@
 package service.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import service.models.OrderType;
 import service.repositories.OrderTypeRepository;
 import service.repositories.PaymentMethodRepository;
 import service.repositories.StreetRepository;
@@ -39,5 +41,31 @@ public class ListServiceImpl implements ListService {
     @Override
     public List<StreetDto> getStreets() {
         return StreetDto.from(streetRepository.findAll(new Sort(Sort.Direction.ASC, "id")));
+    }
+
+    @Override
+    public void deleteOrderType(OrderTypeDto orderType) {
+        OrderType order = OrderType.builder()
+                .name(orderType.getName())
+                .build();
+
+        Example<OrderType> example = Example.of(order);
+
+        try{
+            OrderType actual = orderTypeRepository.findOne(example);
+            if (!actual.equals(null)){
+                orderTypeRepository.delete(actual);
+            }
+        } catch (Exception e){
+            throw new IllegalArgumentException("No such order");
+        }
+    }
+
+    @Override
+    public void addOrderType(OrderTypeDto orderType) {
+        OrderType order = OrderType.builder()
+                .name(orderType.getName())
+                .build();
+        orderTypeRepository.save(order);
     }
 }

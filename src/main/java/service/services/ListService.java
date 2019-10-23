@@ -10,4 +10,6 @@ public interface ListService {
     List<OrderTypeDto> getOrderTypes();
     List<PaymentMethodDto> getPaymentMethods();
     List<StreetDto> getStreets();
+    void deleteOrderType(OrderTypeDto orderType);
+    void addOrderType(OrderTypeDto orderType);
 }

@@ -3,6 +3,8 @@ package service.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import service.services.ListService;
 import service.transfer.OrderTypeDto;
@@ -26,6 +28,18 @@ public class ListController {
     @GetMapping("/getOrderTypes")
     public ResponseEntity<List<OrderTypeDto>> getOrderTypes() {
         return ResponseEntity.ok(listService.getOrderTypes());
+    }
+
+    @PostMapping("/addOrderType")
+    public ResponseEntity<Object> addOrderType(@RequestBody OrderTypeDto orderTypeDto) {
+        listService.addOrderType(orderTypeDto);
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/deleteOrderType")
+    public ResponseEntity<Object> deleteOrderType(@RequestBody OrderTypeDto orderTypeDto) {
+        listService.deleteOrderType(orderTypeDto);
+        return ResponseEntity.ok().build();
     }
 
     @GetMapping("/getPaymentMethods")
