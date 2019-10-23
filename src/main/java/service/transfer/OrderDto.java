@@ -19,7 +19,9 @@ public class OrderDto {
 
     private String date;
 
-    private String time;
+    private String timeFrom;
+
+    private String timeTo;
 
     private String orderList;
 
@@ -46,7 +48,8 @@ public class OrderDto {
         return OrderDto.builder()
                 .id(order.getId())
                 .date(order.getDate())
-                .time(order.getTime())
+                .timeFrom(order.getTimeFrom())
+                .timeTo(order.getTimeTo())
                 .orderList(order.getOrderList())
                 .orderPrice(order.getOrderPrice())
                 .customer(order.getCustomer())

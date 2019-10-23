@@ -13,7 +13,9 @@ public class OrderForm {
 
     private String date;
 
-    private String time;
+    private String timeFrom;
+
+    private String timeTo;
 
     private String orderList;
 

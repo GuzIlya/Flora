@@ -21,8 +21,11 @@ public class Order {
     @Column(name = "date")
     private String date;
 
-    @Column(name = "time")
-    private String time;
+    @Column(name = "time_from")
+    private String timeFrom;
+
+    @Column(name = "time_to")
+    private String timeTo;
 
     @Column(name = "order_list")
     private String orderList;
