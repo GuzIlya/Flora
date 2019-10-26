@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 @Data
 @AllArgsConstructor
@@ -29,7 +29,7 @@ public class Order {
     private String timeTo;
 
     @Column(name = "order_list")
-    private Array orderList;
+    private ArrayList<String> orderList;
 
     @Column(name = "order_price")
     private String orderPrice;

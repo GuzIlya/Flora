@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 
 @Data
@@ -19,7 +19,7 @@ public class OrderForm {
 
     private String timeTo;
 
-    private Array orderList;
+    private ArrayList<String> orderList;
 
     private String orderPrice;
 
