@@ -46,8 +46,20 @@ public class Order {
     @Column(name = "receiver_number")
     private String receiverNumber;
 
-    @Column(name = "address")
-    private String address;
+    @Column(name = "street")
+    private String street;
+
+    @Column(name = "house")
+    private String house;
+
+    @Column(name = "porch")
+    private String porch;
+
+    @Column(name = "floor")
+    private String floor;
+
+    @Column(name = "flat")
+    private String flat;
 
     @Column(name = "payment_method")
     private String paymentMethod;
@@ -58,5 +70,6 @@ public class Order {
     @Column(name = "status")
     private String status;
 
-
+    @Column(name = "poster")
+    private Boolean poster;
 }

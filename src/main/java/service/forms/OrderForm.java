@@ -31,11 +31,21 @@ public class OrderForm {
 
     private String receiverNumber;
 
-    private String address;
+    private String street;
+
+    private String house;
+
+    private String porch;
+
+    private String floor;
+
+    private String flat;
 
     private String paymentMethod;
 
     private String notes;
 
     private String status;
+
+    private Boolean poster;
 }

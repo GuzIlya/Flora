@@ -42,10 +42,15 @@ public class OrderServiceImpl implements OrderService {
                     .customerNumber(orderForm.getCustomerNumber())
                     .receiver(orderForm.getReceiver())
                     .receiverNumber(orderForm.getReceiverNumber())
-                    .address(orderForm.getAddress())
+                    .street(orderForm.getStreet())
+                    .house(orderForm.getHouse())
+                    .porch(orderForm.getPorch())
+                    .floor(orderForm.getFloor())
+                    .flat(orderForm.getFlat())
                     .paymentMethod(orderForm.getPaymentMethod())
                     .notes(orderForm.getNotes())
                     .status(orderForm.getStatus())
+                    .poster(orderForm.getPoster())
                     .build();
             orderRepository.save(order);
     }
@@ -63,10 +68,15 @@ public class OrderServiceImpl implements OrderService {
                 .customerNumber(orderForm.getCustomerNumber())
                 .receiver(orderForm.getReceiver())
                 .receiverNumber(orderForm.getReceiverNumber())
-                .address(orderForm.getAddress())
+                .street(orderForm.getStreet())
+                .house(orderForm.getHouse())
+                .porch(orderForm.getPorch())
+                .floor(orderForm.getFloor())
+                .flat(orderForm.getFlat())
                 .paymentMethod(orderForm.getPaymentMethod())
                 .notes(orderForm.getNotes())
                 .status(orderForm.getStatus())
+                .poster(orderForm.getPoster())
                 .build();
 
         Optional<Order> actual = orderRepository.findOneById(order.getId());
@@ -89,10 +99,15 @@ public class OrderServiceImpl implements OrderService {
                 .customerNumber(orderForm.getCustomerNumber())
                 .receiver(orderForm.getReceiver())
                 .receiverNumber(orderForm.getReceiverNumber())
-                .address(orderForm.getAddress())
+                .street(orderForm.getStreet())
+                .house(orderForm.getHouse())
+                .porch(orderForm.getPorch())
+                .floor(orderForm.getFloor())
+                .flat(orderForm.getFlat())
                 .paymentMethod(orderForm.getPaymentMethod())
                 .notes(orderForm.getNotes())
                 .status(orderForm.getStatus())
+                .poster(orderForm.getPoster())
                 .build();
 
         Example<Order> example = Example.of(order);

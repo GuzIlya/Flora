@@ -36,13 +36,23 @@ public class OrderDto {
 
     private String receiverNumber;
 
-    private String address;
+    private String street;
+
+    private String house;
+
+    private String porch;
+
+    private String floor;
+
+    private String flat;
 
     private String paymentMethod;
 
     private String notes;
 
     private String status;
+
+    private Boolean poster;
 
 
     public static OrderDto from(Order order) {
@@ -57,10 +67,15 @@ public class OrderDto {
                 .customerNumber(order.getCustomerNumber())
                 .receiver(order.getReceiver())
                 .receiverNumber(order.getReceiverNumber())
-                .address(order.getAddress())
+                .street(order.getStreet())
+                .house(order.getHouse())
+                .porch(order.getPorch())
+                .floor(order.getFloor())
+                .flat(order.getFlat())
                 .paymentMethod(order.getPaymentMethod())
                 .notes(order.getNotes())
                 .status(order.getStatus())
+                .poster(order.getPoster())
                 .build();
     }
 
