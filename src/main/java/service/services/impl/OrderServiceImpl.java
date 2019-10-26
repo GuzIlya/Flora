@@ -70,13 +70,8 @@ public class OrderServiceImpl implements OrderService {
 
         Example<Order> example = Example.of(order);
 
-        try{
-            orderRepository.findOne(example);
 
-            throw new IllegalArgumentException("Order already exist");
-        } catch (Exception e){
-            orderRepository.save(order);
-        }
+        orderRepository.save(order);
     }
 
    @Override
@@ -114,6 +109,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public void deleteOrder(OrderForm orderForm) {
         Order order = Order.builder()
+                .id(orderForm.getId())
                 .date(orderForm.getDate())
                 .timeFrom(orderForm.getTimeFrom())
                 .timeTo(orderForm.getTimeTo())

@@ -10,10 +10,12 @@ import java.util.stream.Collectors;
 @Data
 @AllArgsConstructor
 public class OrderTypeDto {
+    private Long id;
+
     private String name;
 
     public static OrderTypeDto from(OrderType orderType) {
-        return new OrderTypeDto(orderType.getName());
+        return new OrderTypeDto(orderType.getId(), orderType.getName());
     }
 
     public static List<OrderTypeDto> from(List<OrderType> orderTypes) {

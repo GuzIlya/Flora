@@ -48,6 +48,7 @@ public class ListServiceImpl implements ListService {
     @Override
     public void deleteOrderType(OrderTypeForm orderType) {
         OrderType order = OrderType.builder()
+                .id(orderType.getId())
                 .name(orderType.getName())
                 .build();
 
@@ -69,14 +70,6 @@ public class ListServiceImpl implements ListService {
                 .name(orderTypeForm.getName())
                 .build();
 
-        Example<OrderType> example = Example.of(orderType);
-
-        try{
-            orderTypeRepository.findOne(example);
-
-            throw new IllegalArgumentException("OrderType already exist");
-        } catch (Exception e){
-            orderTypeRepository.save(orderType);
-        }
+        orderTypeRepository.save(orderType);
     }
 }
