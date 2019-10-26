@@ -71,12 +71,11 @@ public class OrderServiceImpl implements OrderService {
         Example<Order> example = Example.of(order);
 
         try{
-            Order actual = orderRepository.findOne(example);
-            if (actual.equals(null)){
-                orderRepository.save(order);
-            }
-        } catch (Exception e){
+            orderRepository.findOne(example);
+
             throw new IllegalArgumentException("Order already exist");
+        } catch (Exception e){
+            orderRepository.save(order);
         }
     }
 

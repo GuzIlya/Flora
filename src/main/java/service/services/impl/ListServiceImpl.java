@@ -72,12 +72,11 @@ public class ListServiceImpl implements ListService {
         Example<OrderType> example = Example.of(orderType);
 
         try{
-            OrderType actual = orderTypeRepository.findOne(example);
-            if (actual.equals(null)){
-                orderTypeRepository.save(orderType);
-            }
-        } catch (Exception e){
+            orderTypeRepository.findOne(example);
+
             throw new IllegalArgumentException("OrderType already exist");
+        } catch (Exception e){
+            orderTypeRepository.save(orderType);
         }
     }
 }
