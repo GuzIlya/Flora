@@ -68,9 +68,6 @@ public class OrderServiceImpl implements OrderService {
                     .poster(orderForm.getPoster())
                     .build();
 
-        Example<Order> example = Example.of(order);
-
-
         orderRepository.save(order);
     }
 
@@ -130,16 +127,12 @@ public class OrderServiceImpl implements OrderService {
                 .poster(orderForm.getPoster())
                 .build();
 
-        Example<Order> example = Example.of(order);
 
-        try{
-            Order actual = orderRepository.findOne(example);
-            if (!actual.equals(null)){
-                orderRepository.delete(actual);
-            }
-        } catch (Exception e){
-            throw new IllegalArgumentException("No such order");
-        }
+
+        Optional<Order> actual = orderRepository.findOneById(order.getId());
+        if(actual.isPresent())
+            orderRepository.delete(actual.get());
+        else throw new IllegalArgumentException("No such order");
     }
 
     @Override

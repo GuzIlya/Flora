@@ -56,9 +56,7 @@ public class ListServiceImpl implements ListService {
 
         try{
             OrderType actual = orderTypeRepository.findOne(example);
-            if (!actual.equals(null)){
-                orderTypeRepository.delete(actual);
-            }
+            orderTypeRepository.delete(actual);
         } catch (Exception e){
             throw new IllegalArgumentException("No such order");
         }
