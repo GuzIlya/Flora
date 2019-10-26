@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import service.models.Order;
 
+import java.lang.reflect.Array;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,7 +24,7 @@ public class OrderDto {
 
     private String timeTo;
 
-    private String orderList;
+    private Array orderList;
 
     private String orderPrice;
 
