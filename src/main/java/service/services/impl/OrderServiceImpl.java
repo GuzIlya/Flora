@@ -23,6 +23,21 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    public List<OrderDto> findByCustomer(String customer) {
+        return OrderDto.from(orderRepository.findAllByCustomer(customer));
+    }
+
+    @Override
+    public List<OrderDto> findByReceiverNumber(String receiverNumber) {
+        return OrderDto.from(orderRepository.findAllByReceiverNumber(receiverNumber));
+    }
+
+    @Override
+    public List<OrderDto> findByReceiver(String receiver) {
+        return OrderDto.from(orderRepository.findAllByReceiver(receiver));
+    }
+
+    @Override
     public OrderDto getOrderById(Long id) {
         Optional<Order> actual = orderRepository.findOneById(id);
         if(actual.isPresent())
@@ -52,7 +67,17 @@ public class OrderServiceImpl implements OrderService {
                     .status(orderForm.getStatus())
                     .poster(orderForm.getPoster())
                     .build();
-            orderRepository.save(order);
+
+        Example<Order> example = Example.of(order);
+
+        try{
+            Order actual = orderRepository.findOne(example);
+            if (actual.equals(null)){
+                orderRepository.save(order);
+            }
+        } catch (Exception e){
+            throw new IllegalArgumentException("Order already exist");
+        }
     }
 
    @Override

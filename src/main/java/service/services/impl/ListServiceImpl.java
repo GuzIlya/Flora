@@ -69,6 +69,15 @@ public class ListServiceImpl implements ListService {
                 .name(orderTypeForm.getName())
                 .build();
 
-        orderTypeRepository.save(orderType);
+        Example<OrderType> example = Example.of(orderType);
+
+        try{
+            OrderType actual = orderTypeRepository.findOne(example);
+            if (actual.equals(null)){
+                orderTypeRepository.save(orderType);
+            }
+        } catch (Exception e){
+            throw new IllegalArgumentException("OrderType already exist");
+        }
     }
 }

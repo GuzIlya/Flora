@@ -38,6 +38,21 @@ public class OrderController {
         return ResponseEntity.ok(orderService.findByCustomerNumber(customerNumber));
     }
 
+    @GetMapping("/findByCustomer")
+    public ResponseEntity<List<OrderDto>> findByCustomer(@RequestParam("customer") String customer){
+        return ResponseEntity.ok(orderService.findByCustomer(customer));
+    }
+
+    @GetMapping("/findByReceiverNumber")
+    public ResponseEntity<List<OrderDto>> findByReceiverNumber(@RequestParam("receiverNumber") String receiverNumber){
+        return ResponseEntity.ok(orderService.findByReceiverNumber(receiverNumber));
+    }
+
+    @GetMapping("/findByReceiver")
+    public ResponseEntity<List<OrderDto>> findByReceiver(@RequestParam("receiver") String receiver){
+        return ResponseEntity.ok(orderService.findByReceiver(receiver));
+    }
+
     @GetMapping("/getOrders")
     public ResponseEntity<List<OrderDto>> getOrders() {
         return ResponseEntity.ok(orderService.getOrders());
