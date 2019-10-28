@@ -55,7 +55,7 @@ public class OrderController {
         return ResponseEntity.ok(orderService.findByReceiver(receiver));
     }
 
-    @GetMapping("/findByOrd erList")
+    @GetMapping("/findByOrderList")
     public ResponseEntity<List<OrderDto>> findByOrderList(@RequestBody OrderListWrapper orderListWrapper){
         return ResponseEntity.ok(orderService.findByOrderList(orderListWrapper.getOrderList()));
     }
