@@ -32,9 +32,13 @@ public class OrderDto {
 
     private String customerNumber;
 
+    private String customerNumberCode;
+
     private String receiver;
 
     private String receiverNumber;
+
+    private String receiverNumberCode;
 
     private String street;
 
@@ -65,8 +69,10 @@ public class OrderDto {
                 .orderPrice(order.getOrderPrice())
                 .customer(order.getCustomer())
                 .customerNumber(order.getCustomerNumber())
+                .customerNumberCode(order.getCustomerNumberCode())
                 .receiver(order.getReceiver())
                 .receiverNumber(order.getReceiverNumber())
+                .receiverNumberCode(order.getReceiverNumberCode())
                 .street(order.getStreet())
                 .house(order.getHouse())
                 .porch(order.getPorch())

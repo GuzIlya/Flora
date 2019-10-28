@@ -27,9 +27,13 @@ public class OrderForm {
 
     private String customerNumber;
 
+    private String customerNumberCode;
+
     private String receiver;
 
     private String receiverNumber;
+
+    private String receiverNumberCode;
 
     private String street;
 

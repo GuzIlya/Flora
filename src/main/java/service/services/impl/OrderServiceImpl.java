@@ -2,6 +2,7 @@ package service.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import service.forms.OrderForm;
 import service.models.Order;
@@ -9,6 +10,7 @@ import service.repositories.OrderRepository;
 import service.services.OrderService;
 import service.transfer.OrderDto;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -38,6 +40,11 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    public List<OrderDto> findByOrderList(ArrayList<String> orderList) {
+        return OrderDto.from(orderRepository.findAllByOrderList(orderList));
+    }
+
+    @Override
     public OrderDto getOrderById(Long id) {
         Optional<Order> actual = orderRepository.findOneById(id);
         if(actual.isPresent())
@@ -55,8 +62,10 @@ public class OrderServiceImpl implements OrderService {
                     .orderPrice(orderForm.getOrderPrice())
                     .customer(orderForm.getCustomer())
                     .customerNumber(orderForm.getCustomerNumber())
+                    .customerNumberCode(orderForm.getCustomerNumberCode())
                     .receiver(orderForm.getReceiver())
                     .receiverNumber(orderForm.getReceiverNumber())
+                    .receiverNumberCode(orderForm.getReceiverNumberCode())
                     .street(orderForm.getStreet())
                     .house(orderForm.getHouse())
                     .porch(orderForm.getPorch())
@@ -82,8 +91,10 @@ public class OrderServiceImpl implements OrderService {
                 .orderPrice(orderForm.getOrderPrice())
                 .customer(orderForm.getCustomer())
                 .customerNumber(orderForm.getCustomerNumber())
+                .customerNumberCode(orderForm.getCustomerNumberCode())
                 .receiver(orderForm.getReceiver())
                 .receiverNumber(orderForm.getReceiverNumber())
+                .receiverNumberCode(orderForm.getReceiverNumberCode())
                 .street(orderForm.getStreet())
                 .house(orderForm.getHouse())
                 .porch(orderForm.getPorch())
@@ -114,8 +125,10 @@ public class OrderServiceImpl implements OrderService {
                 .orderPrice(orderForm.getOrderPrice())
                 .customer(orderForm.getCustomer())
                 .customerNumber(orderForm.getCustomerNumber())
+                .customerNumberCode(orderForm.getCustomerNumberCode())
                 .receiver(orderForm.getReceiver())
                 .receiverNumber(orderForm.getReceiverNumber())
+                .receiverNumberCode(orderForm.getReceiverNumberCode())
                 .street(orderForm.getStreet())
                 .house(orderForm.getHouse())
                 .porch(orderForm.getPorch())
@@ -137,6 +150,6 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<OrderDto> getOrders() {
-        return OrderDto.from(orderRepository.findAll());
+        return OrderDto.from(orderRepository.findAll(new Sort(Sort.Direction.ASC, "date")));
     }
 }

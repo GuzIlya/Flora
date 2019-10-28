@@ -40,11 +40,17 @@ public class Order {
     @Column(name = "customer_number")
     private String customerNumber;
 
+    @Column(name = "customer_number_code")
+    private String customerNumberCode;
+
     @Column(name = "receiver")
     private String receiver;
 
     @Column(name = "receiver_number")
     private String receiverNumber;
+
+    @Column(name = "receiver_number_code")
+    private String receiverNumberCode;
 
     @Column(name = "street")
     private String street;

@@ -7,6 +7,7 @@ import service.forms.OrderForm;
 import service.services.OrderService;
 import service.transfer.OrderDto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -51,6 +52,11 @@ public class OrderController {
     @GetMapping("/findByReceiver")
     public ResponseEntity<List<OrderDto>> findByReceiver(@RequestParam("receiver") String receiver){
         return ResponseEntity.ok(orderService.findByReceiver(receiver));
+    }
+
+    @GetMapping("/findByOrderList")
+    public ResponseEntity<List<OrderDto>> findByOrderList(@RequestBody ArrayList<String> orderList){
+        return ResponseEntity.ok(orderService.findByOrderList(orderList));
     }
 
     @GetMapping("/getOrders")
