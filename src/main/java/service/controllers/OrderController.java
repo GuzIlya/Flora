@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import service.forms.OrderForm;
+import service.forms.OrderListWrapper;
 import service.services.OrderService;
 import service.transfer.OrderDto;
 
@@ -54,9 +55,9 @@ public class OrderController {
         return ResponseEntity.ok(orderService.findByReceiver(receiver));
     }
 
-    @GetMapping("/findByOrderList")
-    public ResponseEntity<List<OrderDto>> findByOrderList(@RequestBody ArrayList<String> orderList){
-        return ResponseEntity.ok(orderService.findByOrderList(orderList));
+    @GetMapping("/findByOrd erList")
+    public ResponseEntity<List<OrderDto>> findByOrderList(@RequestBody OrderListWrapper orderListWrapper){
+        return ResponseEntity.ok(orderService.findByOrderList(orderListWrapper.getOrderList()));
     }
 
     @GetMapping("/getOrders")
