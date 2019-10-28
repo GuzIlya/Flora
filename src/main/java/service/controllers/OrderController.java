@@ -60,6 +60,11 @@ public class OrderController {
         return ResponseEntity.ok(orderService.findByOrderList(orderListWrapper.getOrderList()));
     }
 
+    @GetMapping("/findByStatus")
+    public ResponseEntity<List<OrderDto>> findByStatus(@RequestParam("status") String status){
+        return ResponseEntity.ok(orderService.findByStatus(status));
+    }
+
     @GetMapping("/getOrders")
     public ResponseEntity<List<OrderDto>> getOrders() {
         return ResponseEntity.ok(orderService.getOrders());

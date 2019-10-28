@@ -15,5 +15,6 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
     List<Order> findAllByReceiverNumber(String receiverNumber);
     List<Order> findAllByReceiver(String receiver);
     List<Order> findAllByOrderList(String[] orderList);
+    List<Order> findAllByStatus(String status);
     Optional<Order> findOneById(Long id);
 }
