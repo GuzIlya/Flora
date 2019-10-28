@@ -13,6 +13,7 @@ import service.transfer.OrderDto;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -40,7 +41,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<OrderDto> findByOrderList(ArrayList<String> orderList) {
+    public List<OrderDto> findByOrderList(String[] orderList) {
         return OrderDto.from(orderRepository.findAllByOrderList(orderList));
     }
 

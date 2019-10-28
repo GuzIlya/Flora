@@ -7,12 +7,13 @@ import service.models.Order;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {
     List<Order> findAllByCustomerNumber(String customerNumber);
     List<Order> findAllByCustomer(String customer);
     List<Order> findAllByReceiverNumber(String receiverNumber);
     List<Order> findAllByReceiver(String receiver);
-    List<Order> findAllByOrderList(ArrayList<String> orderList);
+    List<Order> findAllByOrderList(String[] orderList);
     Optional<Order> findOneById(Long id);
 }

@@ -8,6 +8,7 @@ import service.models.Order;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 
@@ -24,7 +25,7 @@ public class OrderDto {
 
     private String timeTo;
 
-    private ArrayList<String> orderList;
+    private String[] orderList;
 
     private String orderPrice;
 

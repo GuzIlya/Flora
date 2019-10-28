@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 
 @Data
@@ -19,7 +20,7 @@ public class OrderForm {
 
     private String timeTo;
 
-    private ArrayList<String> orderList;
+    private String[] orderList;
 
     private String orderPrice;
 

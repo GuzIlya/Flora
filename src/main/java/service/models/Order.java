@@ -4,9 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -29,7 +31,7 @@ public class Order {
     private String timeTo;
 
     @Column(name = "order_list")
-    private ArrayList<String> orderList;
+    private String[] orderList;
 
     @Column(name = "order_price")
     private String orderPrice;
