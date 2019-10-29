@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import service.forms.OrderTypeForm;
 import service.services.ListService;
+import service.transfer.NumberCodeDto;
 import service.transfer.OrderTypeDto;
 import service.transfer.PaymentMethodDto;
 import service.transfer.StreetDto;
@@ -45,4 +46,8 @@ public class ListController {
 
     @GetMapping("/getPaymentMethods")
     public ResponseEntity<List<PaymentMethodDto>> getPaymentMethods() { return ResponseEntity.ok(listService.getPaymentMethods()); }
+
+    @GetMapping("/getNumberCodes")
+    public ResponseEntity<List<NumberCodeDto>> getNumberCodes() { return ResponseEntity.ok(listService.getNumberCodes()); }
+
 }

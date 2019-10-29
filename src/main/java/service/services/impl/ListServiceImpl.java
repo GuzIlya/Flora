@@ -7,10 +7,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import service.forms.OrderTypeForm;
 import service.models.OrderType;
+import service.repositories.NumberCodeRepository;
 import service.repositories.OrderTypeRepository;
 import service.repositories.PaymentMethodRepository;
 import service.repositories.StreetRepository;
 import service.services.ListService;
+import service.transfer.NumberCodeDto;
 import service.transfer.OrderTypeDto;
 import service.transfer.PaymentMethodDto;
 import service.transfer.StreetDto;
@@ -30,6 +32,9 @@ public class ListServiceImpl implements ListService {
     @Autowired
     StreetRepository streetRepository;
 
+    @Autowired
+    NumberCodeRepository numberCodeRepository;
+
     @Override
     public List<OrderTypeDto> getOrderTypes() {
         return OrderTypeDto.from(orderTypeRepository.findAll(new Sort(Sort.Direction.ASC, "id")));
@@ -43,6 +48,11 @@ public class ListServiceImpl implements ListService {
     @Override
     public List<StreetDto> getStreets() {
         return StreetDto.from(streetRepository.findAll(new Sort(Sort.Direction.ASC, "id")));
+    }
+
+    @Override
+    public List<NumberCodeDto> getNumberCodes() {
+        return NumberCodeDto.from(numberCodeRepository.findAll(new Sort(Sort.Direction.ASC, "id")));
     }
 
     @Override
