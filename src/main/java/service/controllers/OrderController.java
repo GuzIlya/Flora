@@ -3,6 +3,7 @@ package service.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import service.forms.OrderForm;
@@ -82,7 +83,11 @@ public class OrderController {
     public ResponseEntity<InputStreamResource> getOrdersInExcel(@RequestParam("date") String date) throws IOException {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Disposition", "attachment; filename=orders.xlsx");
-        return ResponseEntity.ok().headers(headers).body(orderService.getOrdersInExcel(date));
+        headers.add("Content-Encoding", "UTF-8");
+        return ResponseEntity.ok()
+                .headers(headers)
+                .contentType(MediaType.parseMediaType("application/vnd.ms-excel"))
+                .body(orderService.getOrdersInExcel(date));
     }
 
 
