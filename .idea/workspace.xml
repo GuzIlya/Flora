@@ -7,7 +7,6 @@
     <list default="true" id="a1f8ca2e-9f4e-4b02-b84a-ff0d8842f9f2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/repositories/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/repositories/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/services/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/services/impl/OrderServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -98,17 +97,17 @@
         <counts>
           <entry key="cell" value="183" />
           <entry key="dummy" value="6" />
-          <entry key="java" value="5533" />
+          <entry key="java" value="5542" />
           <entry key="properties" value="226" />
           <entry key="sql" value="32" />
-          <entry key="txt" value="671" />
+          <entry key="txt" value="680" />
           <entry key="xml" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5533" />
-          <entry key="PLAIN_TEXT" value="677" />
+          <entry key="JAVA" value="5542" />
+          <entry key="PLAIN_TEXT" value="686" />
           <entry key="Properties" value="226" />
           <entry key="SQL" value="11" />
           <entry key="Scratch" value="204" />
@@ -215,7 +214,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/services/impl/OrderServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -254,7 +253,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/repositories/OrderRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -330,8 +329,8 @@
         <option value="$PROJECT_DIR$/src/main/java/service/services/OrderService.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/controllers/OrderController.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/models/GenerateExcelReport.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/repositories/OrderRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/services/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/repositories/OrderRepository.java" />
       </list>
     </option>
   </component>
@@ -489,7 +488,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572727599674" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572728519721" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -542,7 +541,7 @@
       <workItem from="1572287680047" duration="8505000" />
       <workItem from="1572305527935" duration="570000" />
       <workItem from="1572339378441" duration="2717000" />
-      <workItem from="1572714323097" duration="11507000" />
+      <workItem from="1572714323097" duration="11973000" />
     </task>
     <task id="LOCAL-00001" summary="changed database properties">
       <created>1571758331227</created>
@@ -768,11 +767,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572725862534</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="fixed bug">
+      <created>1572727943442</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1572727943442</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83039000" />
+    <option name="totallyTimeSpent" value="83505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -846,7 +852,8 @@
     <MESSAGE value="changed order table" />
     <MESSAGE value="added new http end-point" />
     <MESSAGE value="changed logic of orderController" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed logic of orderController" />
+    <MESSAGE value="fixed bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1129,16 +1136,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/repositories/OrderRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/services/impl/OrderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1151,6 +1148,16 @@
             <element signature="method#changeOrder#0;class#OrderServiceImpl#0" />
             <element signature="method#deleteOrder#0;class#OrderServiceImpl#0" />
             <element signature="method#getOrders#0;class#OrderServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/repositories/OrderRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
