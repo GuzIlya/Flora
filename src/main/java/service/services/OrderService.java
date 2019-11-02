@@ -1,8 +1,10 @@
 package service.services;
 
+import org.springframework.core.io.InputStreamResource;
 import service.forms.OrderForm;
 import service.transfer.OrderDto;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -19,4 +21,5 @@ public interface OrderService {
     void deleteOrder(OrderForm orderForm);
     void changeOrder(OrderForm orderForm);
     List<OrderDto> getOrders();
+    InputStreamResource getOrdersInExcel(String date) throws IOException;
 }

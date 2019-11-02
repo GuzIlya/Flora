@@ -1,6 +1,8 @@
 package service.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import service.forms.OrderForm;
@@ -8,6 +10,7 @@ import service.forms.OrderListWrapper;
 import service.services.OrderService;
 import service.transfer.OrderDto;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -74,4 +77,13 @@ public class OrderController {
     public ResponseEntity<OrderDto> getOrderById(@RequestParam("id") Long id){
         return ResponseEntity.ok(orderService.getOrderById(id));
     }
+
+    @GetMapping("/getOrdersInExcel")
+    public ResponseEntity<InputStreamResource> getOrdersInExcel(@RequestParam("date") String date) throws IOException {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Disposition", "attachment; filename=orders.xlsx");
+        return ResponseEntity.ok().headers(headers).body(orderService.getOrdersInExcel(date));
+    }
+
+
 }

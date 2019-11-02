@@ -1,15 +1,20 @@
 package service.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.InputStreamResource;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 import service.forms.OrderForm;
+import service.models.GenerateExcelReport;
 import service.models.Order;
 import service.repositories.OrderRepository;
 import service.services.OrderService;
 import service.transfer.OrderDto;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -158,5 +163,11 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List<OrderDto> getOrders() {
         return OrderDto.from(orderRepository.findAll(new Sort(Sort.Direction.ASC, "date")));
+    }
+
+    @Override
+    public InputStreamResource getOrdersInExcel(String date) throws IOException {
+        ByteArrayInputStream in = GenerateExcelReport.usersToExcel(orderRepository.findAllByDateAfter(date));
+        return new InputStreamResource(in);
     }
 }
