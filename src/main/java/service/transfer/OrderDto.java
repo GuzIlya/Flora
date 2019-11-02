@@ -25,7 +25,7 @@ public class OrderDto {
 
     private String timeTo;
 
-    private String[] orderList;
+    private String orderList;
 
     private String orderPrice;
 
@@ -59,6 +59,8 @@ public class OrderDto {
 
     private Boolean poster;
 
+    private Boolean payStatus;
+
 
     public static OrderDto from(Order order) {
         return OrderDto.builder()
@@ -83,6 +85,7 @@ public class OrderDto {
                 .notes(order.getNotes())
                 .status(order.getStatus())
                 .poster(order.getPoster())
+                .payStatus(order.getPayStatus())
                 .build();
     }
 

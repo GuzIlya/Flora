@@ -41,7 +41,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<OrderDto> findByOrderList(String[] orderList) {
+    public List<OrderDto> findByOrderList(String orderList) {
         return OrderDto.from(orderRepository.findAllByOrderList(orderList));
     }
 
@@ -81,6 +81,7 @@ public class OrderServiceImpl implements OrderService {
                     .notes(orderForm.getNotes())
                     .status(orderForm.getStatus())
                     .poster(orderForm.getPoster())
+                    .payStatus(orderForm.getPayStatus())
                     .build();
 
         orderRepository.save(order);
@@ -110,6 +111,7 @@ public class OrderServiceImpl implements OrderService {
                 .notes(orderForm.getNotes())
                 .status(orderForm.getStatus())
                 .poster(orderForm.getPoster())
+                .payStatus(orderForm.getPayStatus())
                 .build();
 
         Optional<Order> actual = orderRepository.findOneById(order.getId());
@@ -144,9 +146,8 @@ public class OrderServiceImpl implements OrderService {
                 .notes(orderForm.getNotes())
                 .status(orderForm.getStatus())
                 .poster(orderForm.getPoster())
+                .payStatus(orderForm.getPayStatus())
                 .build();
-
-
 
         Optional<Order> actual = orderRepository.findOneById(order.getId());
         if(actual.isPresent())

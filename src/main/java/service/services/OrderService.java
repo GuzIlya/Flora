@@ -12,7 +12,7 @@ public interface OrderService {
     List<OrderDto> findByCustomer(String customer);
     List<OrderDto> findByReceiverNumber(String receiverNumber);
     List<OrderDto> findByReceiver(String receiver);
-    List<OrderDto> findByOrderList(String[] orderList);
+    List<OrderDto> findByOrderList(String orderList);
     List<OrderDto> findByStatus(String status);
     OrderDto getOrderById(Long id);
     void addOrder(OrderForm orderForm);

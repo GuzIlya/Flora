@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderListWrapper {
-    String[] orderList;
+    String orderList;
 }

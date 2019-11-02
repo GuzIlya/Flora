@@ -20,7 +20,7 @@ public class OrderForm {
 
     private String timeTo;
 
-    private String[] orderList;
+    private String orderList;
 
     private String orderPrice;
 
@@ -53,4 +53,6 @@ public class OrderForm {
     private String status;
 
     private Boolean poster;
+
+    private Boolean payStatus;
 }
