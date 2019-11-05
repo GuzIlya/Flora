@@ -70,8 +70,8 @@ public class OrderController {
     }
 
     @GetMapping("/findByPayStatus")
-    public ResponseEntity<List<OrderDto>> findByPayStatus(@RequestParam("payStatus") String status){
-        return ResponseEntity.ok(orderService.findByStatus(status));
+    public ResponseEntity<List<OrderDto>> findByPayStatus(@RequestParam("payStatus") Boolean status){
+        return ResponseEntity.ok(orderService.findByPayStatus(status));
     }
 
     @GetMapping("/getOrders")
