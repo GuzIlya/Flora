@@ -56,6 +56,11 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    public List<OrderDto> findByPayStatus(Boolean status) {
+        return OrderDto.from(orderRepository.findAllByPayStatus(status));
+    }
+
+    @Override
     public OrderDto getOrderById(Long id) {
         Optional<Order> actual = orderRepository.findOneById(id);
         if(actual.isPresent())

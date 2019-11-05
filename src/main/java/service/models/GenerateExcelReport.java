@@ -14,7 +14,7 @@ public class GenerateExcelReport {
                 "Телефон заказчика", "Получатель", "Телефон получателя", "Адрес",
                 "Способ оплаты", "Примечания", "Постер", "Статус оплаты"};
         try (Workbook workbook = new XSSFWorkbook(); ByteArrayOutputStream out = new ByteArrayOutputStream()) {
-            Sheet sheet = workbook.createSheet("Orders");
+            Sheet sheet = workbook.createSheet("Заказы");
 
             Font headerFont = workbook.createFont();
             headerFont.setBold(true);

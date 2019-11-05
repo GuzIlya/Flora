@@ -16,6 +16,7 @@ public interface OrderService {
     List<OrderDto> findByReceiver(String receiver);
     List<OrderDto> findByOrderList(String orderList);
     List<OrderDto> findByStatus(String status);
+    List<OrderDto> findByPayStatus(Boolean status);
     OrderDto getOrderById(Long id);
     void addOrder(OrderForm orderForm);
     void deleteOrder(OrderForm orderForm);
