@@ -15,10 +15,7 @@ import service.transfer.OrderDto;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -167,7 +164,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<OrderDto> getOrders() {
-        return OrderDto.from(orderRepository.findAll(new Sort(Sort.Direction.ASC, "date")));
+        List<Order> orders = orderRepository.findAll();
+        Collections.sort(orders, Comparator.comparing(Order::getDate).thenComparing(Order::getTimeFrom));
+        return OrderDto.from(orders);
     }
 
     @Override
