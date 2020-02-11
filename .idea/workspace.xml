@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1f8ca2e-9f4e-4b02-b84a-ff0d8842f9f2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/models/GenerateExcelReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/models/GenerateExcelReport.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -99,17 +99,17 @@
         <counts>
           <entry key="cell" value="192" />
           <entry key="dummy" value="6" />
-          <entry key="java" value="6579" />
+          <entry key="java" value="6618" />
           <entry key="properties" value="226" />
           <entry key="sql" value="32" />
-          <entry key="txt" value="887" />
+          <entry key="txt" value="933" />
           <entry key="xml" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6579" />
-          <entry key="PLAIN_TEXT" value="893" />
+          <entry key="JAVA" value="6618" />
+          <entry key="PLAIN_TEXT" value="939" />
           <entry key="Properties" value="226" />
           <entry key="SQL" value="11" />
           <entry key="Scratch" value="213" />
@@ -154,11 +154,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/services/impl/OrderServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="178" column="89" selection-start-line="178" selection-start-column="79" selection-end-line="178" selection-end-column="89" />
+            <state relative-caret-position="419">
+              <caret line="176" column="60" selection-start-line="176" selection-start-column="60" selection-end-line="176" selection-end-column="60" />
               <folding>
                 <element signature="method#getOrderById#0;class#OrderServiceImpl#0" />
               </folding>
@@ -166,11 +166,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/models/GenerateExcelReport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1343">
-              <caret line="85" column="32" lean-forward="true" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
+            <state relative-caret-position="408">
+              <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -474,7 +474,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581457782139" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581458513470" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -535,7 +535,7 @@
       <workItem from="1574103283964" duration="3027000" />
       <workItem from="1574160463342" duration="6000" />
       <workItem from="1579737774034" duration="21000" />
-      <workItem from="1581451554458" duration="5050000" />
+      <workItem from="1581451554458" duration="5828000" />
     </task>
     <task id="LOCAL-00001" summary="changed database properties">
       <created>1571758331227</created>
@@ -824,11 +824,18 @@
       <option name="project" value="LOCAL" />
       <updated>1581457307266</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="fixed bug with excel wrong column name">
+      <created>1581457838686</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1581457838686</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96850000" />
+    <option name="totallyTimeSpent" value="97628000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -878,7 +885,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added new GET query" />
     <MESSAGE value="added 2 POST queryes" />
     <MESSAGE value="fixed bugs with OrderTypeForm" />
     <MESSAGE value="fixed bugs with changeOrder query" />
@@ -903,7 +909,8 @@
     <MESSAGE value="added couriers table and end-points" />
     <MESSAGE value="added courier column in order table" />
     <MESSAGE value="added courier column in excel file" />
-    <option name="LAST_COMMIT_MESSAGE" value="added courier column in excel file" />
+    <MESSAGE value="fixed bug with excel wrong column name" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug with excel wrong column name" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1258,13 +1265,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/models/GenerateExcelReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="85" column="32" lean-forward="true" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://c302ad62-d708-41f4-bdbc-c6d9340168cf/database/ddddn02f7avh1k/schema/public/table/orders">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1274,11 +1274,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/services/impl/OrderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="178" column="89" selection-start-line="178" selection-start-column="79" selection-end-line="178" selection-end-column="89" />
+        <state relative-caret-position="419">
+          <caret line="176" column="60" selection-start-line="176" selection-start-column="60" selection-end-line="176" selection-end-column="60" />
           <folding>
             <element signature="method#getOrderById#0;class#OrderServiceImpl#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/models/GenerateExcelReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
         </state>
       </provider>
     </entry>

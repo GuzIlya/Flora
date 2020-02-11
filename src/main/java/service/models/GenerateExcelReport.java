@@ -42,14 +42,12 @@ public class GenerateExcelReport {
                 row.createCell(2).setCellValue(order.getTimeTo());
                 row.createCell(3).setCellValue(order.getOrderList());
                 row.createCell(4).setCellValue(order.getCustomer());
-                row.createCell(5).setCellValue(order.getCustomerNumberCode() + order.getCustomerNumber());
+                if(!order.getCustomerNumber().isEmpty())
+                    row.createCell(5).setCellValue(order.getCustomerNumberCode() + order.getCustomerNumber());
                 row.createCell(6).setCellValue(order.getReceiver());
-                row.createCell(7).setCellValue(order.getReceiverNumberCode() + order.getReceiverNumber());
-                row.createCell(8).setCellValue(order.getStreet()
-                        + " д." + order.getHouse()
-                        + " пд." + order.getPorch()
-                        + " эт." + order.getFloor()
-                        + " кв." + order.getFlat());
+                if(!order.getReceiverNumberCode().isEmpty())
+                    row.createCell(7).setCellValue(order.getReceiverNumberCode() + order.getReceiverNumber());
+                row.createCell(8).setCellValue(order.getStreet());
                 row.createCell(9).setCellValue(order.getPaymentMethod());
                 row.createCell(10).setCellValue(order.getCourier());
 
