@@ -5,17 +5,13 @@ import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import service.forms.CourierForm;
 import service.forms.OrderTypeForm;
+import service.models.Courier;
 import service.models.OrderType;
-import service.repositories.NumberCodeRepository;
-import service.repositories.OrderTypeRepository;
-import service.repositories.PaymentMethodRepository;
-import service.repositories.StreetRepository;
+import service.repositories.*;
 import service.services.ListService;
-import service.transfer.NumberCodeDto;
-import service.transfer.OrderTypeDto;
-import service.transfer.PaymentMethodDto;
-import service.transfer.StreetDto;
+import service.transfer.*;
 
 import javax.persistence.GeneratedValue;
 import java.util.List;
@@ -35,6 +31,9 @@ public class ListServiceImpl implements ListService {
     @Autowired
     NumberCodeRepository numberCodeRepository;
 
+    @Autowired
+    CouriersRepository couriersRepository;
+
     @Override
     public List<OrderTypeDto> getOrderTypes() {
         return OrderTypeDto.from(orderTypeRepository.findAll(new Sort(Sort.Direction.ASC, "id")));
@@ -53,6 +52,37 @@ public class ListServiceImpl implements ListService {
     @Override
     public List<NumberCodeDto> getNumberCodes() {
         return NumberCodeDto.from(numberCodeRepository.findAll(new Sort(Sort.Direction.ASC, "id")));
+    }
+
+    @Override
+    public List<CourierDto> getCouriers() {
+        return CourierDto.from(couriersRepository.findAll(new Sort(Sort.Direction.ASC, "id")));
+    }
+
+    @Override
+    public void deleteCourier(CourierForm courierForm) {
+        Courier courier = Courier.builder()
+                .id(courierForm.getId())
+                .data(courierForm.getData())
+                .build();
+
+        Example<Courier> example = Example.of(courier);
+
+        try{
+            Courier actual = couriersRepository.findOne(example);
+            couriersRepository.delete(actual);
+        } catch (Exception e){
+            throw new IllegalArgumentException("No such order");
+        }
+    }
+
+    @Override
+    public void addCourier(CourierForm courierForm) {
+        Courier courier = Courier.builder()
+                .data(courierForm.getData())
+                .build();
+
+        couriersRepository.save(courier);
     }
 
     @Override

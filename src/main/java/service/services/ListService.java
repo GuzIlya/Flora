@@ -1,10 +1,8 @@
 package service.services;
 
+import service.forms.CourierForm;
 import service.forms.OrderTypeForm;
-import service.transfer.NumberCodeDto;
-import service.transfer.OrderTypeDto;
-import service.transfer.PaymentMethodDto;
-import service.transfer.StreetDto;
+import service.transfer.*;
 
 import java.util.List;
 
@@ -13,6 +11,9 @@ public interface ListService {
     List<PaymentMethodDto> getPaymentMethods();
     List<StreetDto> getStreets();
     List<NumberCodeDto> getNumberCodes();
+    List<CourierDto> getCouriers();
+    void deleteCourier(CourierForm courierForm);
+    void addCourier(CourierForm courierForm);
     void deleteOrderType(OrderTypeForm orderType);
     void addOrderType(OrderTypeForm orderType);
 }

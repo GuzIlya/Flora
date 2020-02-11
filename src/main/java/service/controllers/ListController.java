@@ -6,12 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import service.forms.CourierForm;
 import service.forms.OrderTypeForm;
+import service.models.Courier;
 import service.services.ListService;
-import service.transfer.NumberCodeDto;
-import service.transfer.OrderTypeDto;
-import service.transfer.PaymentMethodDto;
-import service.transfer.StreetDto;
+import service.transfer.*;
 
 import java.util.List;
 
@@ -49,5 +48,20 @@ public class ListController {
 
     @GetMapping("/getNumberCodes")
     public ResponseEntity<List<NumberCodeDto>> getNumberCodes() { return ResponseEntity.ok(listService.getNumberCodes()); }
+
+    @GetMapping("/getCouriers")
+    public ResponseEntity<List<CourierDto>> getCouriers() { return ResponseEntity.ok(listService.getCouriers()); }
+
+    @PostMapping("/addCourier")
+    public ResponseEntity<Object> addCourier(@RequestBody CourierForm courierForm) {
+        listService.addCourier(courierForm);
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/deleteCourier")
+    public ResponseEntity<Object> deleteCourier(@RequestBody CourierForm courierForm) {
+        listService.deleteCourier(courierForm);
+        return ResponseEntity.ok().build();
+    }
 
 }
