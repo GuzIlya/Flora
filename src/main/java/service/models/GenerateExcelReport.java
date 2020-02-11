@@ -51,9 +51,9 @@ public class GenerateExcelReport {
                         + " эт." + order.getFloor()
                         + " кв." + order.getFlat());
                 row.createCell(9).setCellValue(order.getPaymentMethod());
-                row.createCell(10).setCellValue(order.getPaymentMethod());
+                row.createCell(10).setCellValue(order.getCourier());
 
-                row.createCell(11).setCellValue(order.getCourier());
+                row.createCell(11).setCellValue(order.getNotes());
 
                 if(order.getPoster())
                     row.createCell(12).setCellValue("Да");
