@@ -12,7 +12,7 @@ public class GenerateExcelReport {
     public static ByteArrayInputStream usersToExcel(List<Order> orders) throws IOException {
         String[] COLUMNs = { "Дата", "Время от", "Время до", "Заказ", "Заказчик",
                 "Телефон заказчика", "Получатель", "Телефон получателя", "Адрес",
-                "Способ оплаты", "Примечания", "Постер", "Статус оплаты"};
+                "Способ оплаты", "Курьер", "Примечания", "Постер", "Статус оплаты"};
         try (Workbook workbook = new XSSFWorkbook(); ByteArrayOutputStream out = new ByteArrayOutputStream()) {
             Sheet sheet = workbook.createSheet("Заказы");
 
@@ -51,17 +51,19 @@ public class GenerateExcelReport {
                         + " эт." + order.getFloor()
                         + " кв." + order.getFlat());
                 row.createCell(9).setCellValue(order.getPaymentMethod());
-                row.createCell(10).setCellValue(order.getNotes());
+                row.createCell(10).setCellValue(order.getPaymentMethod());
+
+                row.createCell(11).setCellValue(order.getCourier());
 
                 if(order.getPoster())
-                    row.createCell(11).setCellValue("Да");
+                    row.createCell(12).setCellValue("Да");
                 else
-                    row.createCell(11).setCellValue("Нет");
+                    row.createCell(12).setCellValue("Нет");
 
                 if(order.getPayStatus())
-                    row.createCell(12).setCellValue("Оплачен");
+                    row.createCell(13).setCellValue("Оплачен");
                 else
-                    row.createCell(12).setCellValue("Не оплачен");
+                    row.createCell(13).setCellValue("Не оплачен");
 
             }
 
@@ -79,6 +81,7 @@ public class GenerateExcelReport {
             sheet.autoSizeColumn(10);
             sheet.autoSizeColumn(11);
             sheet.autoSizeColumn(12);
+            sheet.autoSizeColumn(13);
 
             workbook.write(out);
             return new ByteArrayInputStream(out.toByteArray());
