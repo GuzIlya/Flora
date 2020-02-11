@@ -45,7 +45,7 @@ public class GenerateExcelReport {
                 if(!order.getCustomerNumber().isEmpty())
                     row.createCell(5).setCellValue(order.getCustomerNumberCode() + order.getCustomerNumber());
                 row.createCell(6).setCellValue(order.getReceiver());
-                if(!order.getReceiverNumberCode().isEmpty())
+                if(!order.getReceiverNumber().isEmpty())
                     row.createCell(7).setCellValue(order.getReceiverNumberCode() + order.getReceiverNumber());
                 row.createCell(8).setCellValue(order.getStreet());
                 row.createCell(9).setCellValue(order.getPaymentMethod());
