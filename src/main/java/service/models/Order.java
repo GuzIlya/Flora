@@ -75,10 +75,12 @@ public class Order {
     @Column(name = "status")
     private String status;
 
+    @Column(name = "courier")
+    private String courier;
+
     @Column(name = "poster")
     private Boolean poster;
 
     @Column(name = "pay_status")
     private Boolean payStatus;
-
 }

@@ -57,6 +57,8 @@ public class OrderDto {
 
     private String status;
 
+    private String courier;
+
     private Boolean poster;
 
     private Boolean payStatus;
@@ -84,6 +86,7 @@ public class OrderDto {
                 .paymentMethod(order.getPaymentMethod())
                 .notes(order.getNotes())
                 .status(order.getStatus())
+                .courier(order.getCourier())
                 .poster(order.getPoster())
                 .payStatus(order.getPayStatus())
                 .build();

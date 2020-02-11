@@ -52,6 +52,8 @@ public class OrderForm {
 
     private String status;
 
+    private String courier;
+
     private Boolean poster;
 
     private Boolean payStatus;

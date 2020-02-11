@@ -87,6 +87,7 @@ public class OrderServiceImpl implements OrderService {
                     .paymentMethod(orderForm.getPaymentMethod())
                     .notes(orderForm.getNotes())
                     .status(orderForm.getStatus())
+                    .courier(orderForm.getCourier())
                     .poster(orderForm.getPoster())
                     .payStatus(orderForm.getPayStatus())
                     .build();
@@ -117,6 +118,7 @@ public class OrderServiceImpl implements OrderService {
                 .paymentMethod(orderForm.getPaymentMethod())
                 .notes(orderForm.getNotes())
                 .status(orderForm.getStatus())
+                .courier(orderForm.getCourier())
                 .poster(orderForm.getPoster())
                 .payStatus(orderForm.getPayStatus())
                 .build();
@@ -152,6 +154,7 @@ public class OrderServiceImpl implements OrderService {
                 .paymentMethod(orderForm.getPaymentMethod())
                 .notes(orderForm.getNotes())
                 .status(orderForm.getStatus())
+                .courier(orderForm.getCourier())
                 .poster(orderForm.getPoster())
                 .payStatus(orderForm.getPayStatus())
                 .build();
