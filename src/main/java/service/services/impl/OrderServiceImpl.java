@@ -123,12 +123,9 @@ public class OrderServiceImpl implements OrderService {
                 .payStatus(orderForm.getPayStatus())
                 .build();
 
-        Optional<Order> actual = orderRepository.findOneById(order.getId());
-        if (actual.isPresent()){
-            orderRepository.delete(actual.get());
+        if (orderRepository.findOneById(order.getId()).isPresent()){
+            orderRepository.save(order);
         } else throw new IllegalArgumentException("No such order");
-        orderRepository.save(order);
-
     }
 
     @Override

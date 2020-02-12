@@ -27,6 +27,7 @@ public class Order {
     @Column(name = "time_to")
     private String timeTo;
 
+    @Lob
     @Column(name = "order_list")
     private String orderList;
 
@@ -69,6 +70,7 @@ public class Order {
     @Column(name = "payment_method")
     private String paymentMethod;
 
+    @Lob
     @Column(name = "notes")
     private String notes;
 
