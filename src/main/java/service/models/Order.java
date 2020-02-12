@@ -27,8 +27,7 @@ public class Order {
     @Column(name = "time_to")
     private String timeTo;
 
-    @Lob
-    @Column(name = "order_list")
+    @Column(name = "order_list", length = 1024)
     private String orderList;
 
     @Column(name = "order_price")
@@ -70,8 +69,7 @@ public class Order {
     @Column(name = "payment_method")
     private String paymentMethod;
 
-    @Lob
-    @Column(name = "notes")
+    @Column(name = "notes", length = 1024)
     private String notes;
 
     @Column(name = "status")

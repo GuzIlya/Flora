@@ -8643,8 +8643,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>xqjttanwhprpmy</Owner>
-      <IntrospectionTimestamp>2020-02-12.16:54:24.455</IntrospectionTimestamp>
-      <IntrospectionStateNumber>12897284</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2020-02-12.17:44:18.162</IntrospectionTimestamp>
+      <IntrospectionStateNumber>12900179</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -8780,7 +8780,7 @@
     <table id="1755" parent="1737" name="orders">
       <ObjectId>516602</ObjectId>
       <Owner>xqjttanwhprpmy</Owner>
-      <StateNumber>12897188</StateNumber>
+      <StateNumber>12900065</StateNumber>
     </table>
     <table id="1756" parent="1737" name="payment_methods">
       <ObjectId>209673</ObjectId>
@@ -9010,16 +9010,16 @@
       <TypeId>1043</TypeId>
     </column>
     <column id="1793" parent="1755" name="notes">
-      <Position>29</Position>
-      <DataType>text|0s</DataType>
-      <StateNumber>12897187</StateNumber>
-      <TypeId>25</TypeId>
+      <Position>33</Position>
+      <DataType>varchar(1024)|0s</DataType>
+      <StateNumber>12900065</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
     <column id="1794" parent="1755" name="order_list">
-      <Position>30</Position>
-      <DataType>text|0s</DataType>
-      <StateNumber>12897188</StateNumber>
-      <TypeId>25</TypeId>
+      <Position>34</Position>
+      <DataType>varchar(1024)|0s</DataType>
+      <StateNumber>12900059</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
     <index id="1795" parent="1755" name="orders_pkey">
       <ObjectId>516609</ObjectId>

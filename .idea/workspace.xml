@@ -6,13 +6,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c302ad62-d708-41f4-bdbc-c6d9340168cf/storage_v2/_src_/database/ddddn02f7avh1k.jCYOFg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c302ad62-d708-41f4-bdbc-c6d9340168cf/storage_v2/_src_/database/ddddn02f7avh1k.jCYOFg/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/models/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/services/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/services/impl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/forms/OrderForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/forms/OrderForm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/models/GenerateExcelReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/models/GenerateExcelReport.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/models/Order$OrderBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/models/Order$OrderBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/models/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/models/Order.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/services/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/services/impl/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/transfer/OrderDto$OrderDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/transfer/OrderDto$OrderDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/transfer/OrderDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/transfer/OrderDto.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -106,22 +107,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cell" value="431" />
+          <entry key="cell" value="432" />
           <entry key="dummy" value="6" />
-          <entry key="java" value="6756" />
+          <entry key="java" value="6811" />
           <entry key="properties" value="226" />
-          <entry key="sql" value="56" />
-          <entry key="txt" value="989" />
+          <entry key="sql" value="210" />
+          <entry key="txt" value="1053" />
           <entry key="xml" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6756" />
-          <entry key="PLAIN_TEXT" value="995" />
+          <entry key="JAVA" value="6811" />
+          <entry key="PLAIN_TEXT" value="1059" />
           <entry key="Properties" value="226" />
           <entry key="SQL" value="11" />
-          <entry key="Scratch" value="476" />
+          <entry key="Scratch" value="631" />
           <entry key="XML" value="12" />
         </counts>
       </usages-collector>
@@ -129,7 +130,7 @@
         <counts>
           <entry key="class" value="4" />
           <entry key="couriers" value="1" />
-          <entry key="java" value="334" />
+          <entry key="java" value="339" />
           <entry key="number_code" value="1" />
           <entry key="order_type" value="14" />
           <entry key="orders" value="26" />
@@ -148,7 +149,7 @@
         <counts>
           <entry key="CLASS" value="4" />
           <entry key="Database Element" value="69" />
-          <entry key="JAVA" value="334" />
+          <entry key="JAVA" value="339" />
           <entry key="Properties" value="24" />
           <entry key="Scratch" value="9" />
           <entry key="XML" value="3" />
@@ -164,11 +165,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/services/impl/OrderServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="167" column="27" lean-forward="true" selection-start-line="167" selection-start-column="27" selection-end-line="167" selection-end-column="27" />
+              <folding>
+                <element signature="method#getOrderById#0;class#OrderServiceImpl#0" />
+                <element signature="method#changeOrder#0;class#OrderServiceImpl#0" />
+                <element signature="method#deleteOrder#0;class#OrderServiceImpl#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/models/GenerateExcelReport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="42" column="67" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/models/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-629">
-              <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+            <state relative-caret-position="334">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
             </state>
           </provider>
         </entry>
@@ -183,28 +207,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/transfer/OrderDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="72" column="35" lean-forward="true" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application2.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret selection-end-line="6" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/models/PaymentMethod.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/models/Street.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -219,14 +234,41 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/forms/OrderForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="50" column="18" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="das://c302ad62-d708-41f4-bdbc-c6d9340168cf/database/ddddn02f7avh1k/schema/public/table/orders">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
               <column-attributes>
+                <column name="id" enabled="false" />
                 <column name="customer" enabled="false" />
                 <column name="customer_number" enabled="false" />
                 <column name="date" enabled="false" />
+                <column name="order_price" enabled="false" />
+                <column name="payment_method" enabled="false" />
+                <column name="receiver" enabled="false" />
+                <column name="receiver_number" enabled="false" />
+                <column name="status" enabled="false" />
+                <column name="time_from" enabled="false" />
+                <column name="time_to" enabled="false" />
+                <column name="flat" enabled="false" />
+                <column name="floor" enabled="false" />
+                <column name="house" enabled="false" />
+                <column name="porch" enabled="false" />
+                <column name="poster" enabled="false" />
+                <column name="street" enabled="false" />
+                <column name="customer_number_code" enabled="false" />
+                <column name="receiver_number_code" enabled="false" />
+                <column name="pay_status" enabled="false" />
+                <column name="courier" enabled="false" />
               </column-attributes>
             </state>
           </provider>
@@ -235,8 +277,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c302ad62-d708-41f4-bdbc-c6d9340168cf/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="204">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -299,15 +341,15 @@
         <option value="$PROJECT_DIR$/src/main/java/service/services/ListService.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/services/impl/ListServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/controllers/ListController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/repositories/OrderRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/services/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/models/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/service/forms/OrderForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/transfer/OrderDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/models/GenerateExcelReport.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/repositories/OrderRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/services/impl/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/service/models/Test.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c302ad62-d708-41f4-bdbc-c6d9340168cf/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/service/models/Order.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c302ad62-d708-41f4-bdbc-c6d9340168cf/console.sql" />
       </list>
     </option>
   </component>
@@ -468,9 +510,9 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581515677624" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581518718650" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Edit As Language" value="CommandLine&#10;Angular2HTML&#10;GenericSQL" />
-    <property name="database.console.LAST_STATE" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -531,7 +573,7 @@
       <workItem from="1574160463342" duration="6000" />
       <workItem from="1579737774034" duration="21000" />
       <workItem from="1581451554458" duration="7449000" />
-      <workItem from="1581512833364" duration="2679000" />
+      <workItem from="1581512833364" duration="5859000" />
     </task>
     <task id="LOCAL-00001" summary="changed database properties">
       <created>1571758331227</created>
@@ -841,17 +883,24 @@
       <option name="project" value="LOCAL" />
       <updated>1581458908447</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="fixed changing order bug, changed field type in order table">
+      <created>1581515745102</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1581515745102</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101928000" />
+    <option name="totallyTimeSpent" value="105108000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18791947" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18791947" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -861,13 +910,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2638298" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2638298" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Database Console" order="8" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Database Console" order="8" weight="0.32907802" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3319149" />
@@ -895,7 +944,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed bugs with changeOrder query" />
     <MESSAGE value="fixed bugs with addOrderType query" />
     <MESSAGE value="Test commit for fixing bug" />
     <MESSAGE value="fixing bug with adding OrderType" />
@@ -920,7 +968,8 @@
     <MESSAGE value="fixed bug with excel wrong column name" />
     <MESSAGE value="fixed excel editing" />
     <MESSAGE value="fixed bug with numbercode column" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug with numbercode column" />
+    <MESSAGE value="fixed changing order bug, changed field type in order table" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed changing order bug, changed field type in order table" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1076,38 +1125,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/models/GenerateExcelReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/services/impl/ListServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/transfer/OrderDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="89" column="30" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://c302ad62-d708-41f4-bdbc-c6d9340168cf/database/ddddn02f7avh1k/schema/public/table/payment_methods">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/forms/OrderForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>
@@ -1132,16 +1153,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/services/impl/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="119" column="21" lean-forward="true" selection-start-line="119" selection-start-column="21" selection-end-line="119" selection-end-column="21" />
-          <folding>
-            <element signature="method#getOrderById#0;class#OrderServiceImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/models/OrderType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1163,27 +1174,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://c302ad62-d708-41f4-bdbc-c6d9340168cf/database/ddddn02f7avh1k/schema/public/table/streets">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application2.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="6" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/models/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1201,10 +1191,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/services/impl/ListServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application2.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c302ad62-d708-41f4-bdbc-c6d9340168cf/database/ddddn02f7avh1k/schema/public/table/streets">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/transfer/OrderDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="72" column="35" lean-forward="true" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/services/impl/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="167" column="27" lean-forward="true" selection-start-line="167" selection-start-column="27" selection-end-line="167" selection-end-column="27" />
+          <folding>
+            <element signature="method#getOrderById#0;class#OrderServiceImpl#0" />
+            <element signature="method#changeOrder#0;class#OrderServiceImpl#0" />
+            <element signature="method#deleteOrder#0;class#OrderServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/models/GenerateExcelReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="42" column="67" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/forms/OrderForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c302ad62-d708-41f4-bdbc-c6d9340168cf/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -1213,17 +1264,35 @@
         <state>
           <filtering enabled="true" />
           <column-attributes>
+            <column name="id" enabled="false" />
             <column name="customer" enabled="false" />
             <column name="customer_number" enabled="false" />
             <column name="date" enabled="false" />
+            <column name="order_price" enabled="false" />
+            <column name="payment_method" enabled="false" />
+            <column name="receiver" enabled="false" />
+            <column name="receiver_number" enabled="false" />
+            <column name="status" enabled="false" />
+            <column name="time_from" enabled="false" />
+            <column name="time_to" enabled="false" />
+            <column name="flat" enabled="false" />
+            <column name="floor" enabled="false" />
+            <column name="house" enabled="false" />
+            <column name="porch" enabled="false" />
+            <column name="poster" enabled="false" />
+            <column name="street" enabled="false" />
+            <column name="customer_number_code" enabled="false" />
+            <column name="receiver_number_code" enabled="false" />
+            <column name="pay_status" enabled="false" />
+            <column name="courier" enabled="false" />
           </column-attributes>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/models/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-629">
-          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+        <state relative-caret-position="334">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
         </state>
       </provider>
     </entry>
