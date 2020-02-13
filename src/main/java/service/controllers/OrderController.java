@@ -84,6 +84,11 @@ public class OrderController {
         return ResponseEntity.ok(orderService.getOrderById(id));
     }
 
+    @GetMapping("/getOrdersByIdDesc")
+    public ResponseEntity<List<OrderDto>> getOrderByIdDesc(){
+        return ResponseEntity.ok(orderService.getOrdersByIdDesc());
+    }
+
     @GetMapping("/getOrdersInExcel")
     public ResponseEntity<InputStreamResource> getOrdersInExcel(@RequestParam("date") String date) throws IOException {
         HttpHeaders headers = new HttpHeaders();

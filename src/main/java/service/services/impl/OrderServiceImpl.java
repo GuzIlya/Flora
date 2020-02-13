@@ -170,6 +170,11 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    public List<OrderDto> getOrdersByIdDesc() {
+        return OrderDto.from(orderRepository.findAll(new Sort(Sort.Direction.DESC, "id")));
+    }
+
+    @Override
     public InputStreamResource getOrdersInExcel(String date) throws IOException {
         ByteArrayInputStream in = GenerateExcelReport.usersToExcel(orderRepository.findAllByStatusAndDateLessThanEqual("order-done", date));
 

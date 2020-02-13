@@ -22,5 +22,6 @@ public interface OrderService {
     void deleteOrder(OrderForm orderForm);
     void changeOrder(OrderForm orderForm);
     List<OrderDto> getOrders();
+    List<OrderDto> getOrdersByIdDesc();
     InputStreamResource getOrdersInExcel(String date) throws IOException;
 }
