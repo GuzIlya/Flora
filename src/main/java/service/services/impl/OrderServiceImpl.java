@@ -24,22 +24,23 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<OrderDto> findByCustomerNumber(String customerNumber) {
-        return OrderDto.from(orderRepository.findAllByCustomerNumber(customerNumber));
+
+        return OrderDto.from(orderRepository.findByCustomerNumberContaining(customerNumber));
     }
 
     @Override
     public List<OrderDto> findByCustomer(String customer) {
-        return OrderDto.from(orderRepository.findAllByCustomer(customer));
+        return OrderDto.from(orderRepository.findByCustomerContaining(customer));
     }
 
     @Override
     public List<OrderDto> findByReceiverNumber(String receiverNumber) {
-        return OrderDto.from(orderRepository.findAllByReceiverNumber(receiverNumber));
+        return OrderDto.from(orderRepository.findByReceiverNumberContaining(receiverNumber));
     }
 
     @Override
     public List<OrderDto> findByReceiver(String receiver) {
-        return OrderDto.from(orderRepository.findAllByReceiver(receiver));
+        return OrderDto.from(orderRepository.findByReceiverContaining(receiver));
     }
 
     @Override
