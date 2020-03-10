@@ -18,6 +18,7 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
     List<Order> findAllByOrderList(String orderList);
     List<Order> findAllByStatus(String status);
     List<Order> findAllByStatusAndDateLessThanEqual(String status, String date);
+    List<Order> findAllByDateLessThanEqual(String date);
     List<Order> findAllByPayStatus(Boolean payStatus);
     Optional<Order> findOneById(Long id);
 }

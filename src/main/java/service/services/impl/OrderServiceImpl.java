@@ -177,9 +177,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public InputStreamResource getOrdersInExcel(String date) throws IOException {
-        ByteArrayInputStream in = GenerateExcelReport.usersToExcel(orderRepository.findAllByStatusAndDateLessThanEqual("order-done", date));
+        ByteArrayInputStream in = GenerateExcelReport.usersToExcel(orderRepository.findAllByDateLessThanEqual(date));
 
-        for(Order order : orderRepository.findAllByStatusAndDateLessThanEqual("order-done", date))
+        for(Order order : orderRepository.findAllByDateLessThanEqual(date))
             orderRepository.delete(order);
 
         return new InputStreamResource(in);

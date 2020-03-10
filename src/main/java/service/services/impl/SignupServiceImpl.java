@@ -17,7 +17,7 @@ public class SignupServiceImpl implements SignupService {
     @Override
     public void signUp(UserForm userForm) {
         if(!usersRepository.findOneByLogin(userForm.getLogin()).isPresent()) {
-            String hashPassword = new BCryptPasswordEncoder().encode(userForm.getPassword());
+                String hashPassword = new BCryptPasswordEncoder().encode(userForm.getPassword());
 
             User user = User.builder()
                     .hashPassword(hashPassword)
